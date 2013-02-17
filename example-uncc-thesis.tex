@@ -1,0 +1,219 @@
+ \documentclass[12pt]{report}
+%
+   \usepackage{uncc-thesis}
+%-----------------------------------------------------------------------------
+%
+% Convert to ps with: dvips -O 0in,0.6875in -o e.ps example-uncc-thesis
+%
+%  Commands:
+%
+%  These can appear in any order so long as they are prior to \maketitle
+%  which is the command that actually makes the title page.  Place any of the
+%  following after \begin{document} and before \maketitle.
+%
+%  Default values are shown.
+%
+%  \logofile{UNCC_logo.eps} % Use the EPS file as the logo on the title page.
+%                           % Default is to not provide a logo on the title page.
+%
+% 
+\begin{document}
+%  \title{Invention of the wheel}
+%  \author{Anonymous}
+%  \university{The University of North Carolina at Charlotte}
+%  \location{Charlotte}
+%  \thesisyear{\the\year}
+%  \degree{Doctor of Philosophy}
+%  \department{Computer Science}
+%
+% 3 lines for \submissionstmt:
+%  \submissionstmt{A dissertation submitted to the faculty
+% of \theuniversity\ in partial fulfillment of the requirements for the degree
+% of \thedegree\ in \thedepartment}
+%
+%  \committeemember{UNKNOWN ADVISOR} % First sets the \advisor default.
+%  \committeemember{Another person}
+%  \committeemember{Last  person} % Maximum of 10 can be specified.
+%
+%  \advisor{NO ONE}
+
+\committeemember{The Wife}
+  \university{The University of Johnnyland}
+  \author{Me}
+  \title{Invention of the square}
+\logofile{UNCClogo.eps}
+\maketitle
+
+
+\begin{abstract}This is my abstract
+\end{abstract}
+
+%-------------------------------------------------
+%   The following three \section* can replace
+%   those with the group in listing A.  Each
+%   begins with \section*{whatever} and ends with
+%   \pagebreak{}.  The \pagebreak{} forces each
+%   un-numbered section to start on a new page.
+%   Just uncomment everyting down to the %----- line
+%   and comment the entire 'listing A'
+%
+%\section*{Dedication}
+%This is my dedicate.
+%\pagebreak{}
+%
+%\section*{Acknowledgments}
+%This is my Ack.
+%\pagebreak{}
+
+%\section*{Introduction}
+%This is my Intro.
+%\pagebreak{}
+%-------------------------------------------------
+%
+%-------------------------------------------------
+%
+% Begining of listing A 
+%
+\dedication
+This is my dedication.
+
+\acknowledgments
+This is my acknowledgment.
+\introduction
+Here is where you introduce the material.  If something should be said
+here, then it should be said here.  While, things that should be mentioned
+elsewhere, should be mentioned elsewhere.  In the meantime, don't overstate your
+objectives, otherwise those in positions of authority and power over you may hold
+you to it.
+
+That's the summary of the introduction.  While it is ok to be general, you should
+be specific about what you write.  This way, you can be specific about the things
+you say, all the while framing what you say generally.
+
+%
+% End of listing A 
+%-------------------------------------------------
+
+\clearpage
+\tableofcontents
+\clearpage
+\listoftables
+\clearpage
+\listoffigures
+%\listofsymbols
+
+\pagebreak{}
+
+
+
+\chapter{My first chapter}
+Ok, this is my paragraph.  I reference the bib entry\cite{key-2}
+
+\pagebreak{}
+
+This just simulates another page.  Oh, we can add sections too.
+Please see figure \ref{fig:Crown}.
+\section{My new section.}
+How about this section?  It is great?
+
+\chapter{Second chapter}
+Something about chapter 2 that I like.
+\section{Chapter 2 section}
+And the figure is \ref{fig:two}.
+\begin{figure}
+\begin{centering}
+\includegraphics[scale=0.5]{UNCClogo.eps}
+\par\end{centering}
+
+\caption{\label{fig:two}A Miner Crown.}
+
+\end{figure}
+
+
+\chapter{Conclusion}
+I am done. 
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale=0.5]{UNCClogo.eps}
+\par\end{centering}
+
+\caption{\label{fig:Crown}A Miner Crown.}
+
+\end{figure}
+
+%
+% Two table examples.  The first puts the caption above the table,
+% the second puts the caption below.  UNCC thesis style
+% wants the caption below the table.
+%
+
+\begin{table}[ht]
+ \caption{Nonlinear Model Results} % title of Table
+ \centering % used for centering table
+ \begin{tabular}{cccc} % centered columns (4 columns)
+ \hline\hline %inserts double horizontal lines
+ Case & Method\#1 & Method\#2 & Method\#3 \\ [0.5ex] % inserts table
+ %heading
+ \hline % inserts single horizontal line
+1 & 50 & 837 & 970\\ % inserting body of the table
+2 & 47 & 877 & 230\\
+3 & 31 & 25& 415\\
+4 & 35 & 144 & 2356 \\
+5 & 45 & 300 & 556 \\ [1ex]
+% [1ex] adds vertical space
+ \hline %inserts single line
+ \end{tabular} \label{table:nonlin} % is used to refer this table in the text.
+\end{table}
+
+\begin{table}
+\begin{tabular}{@{}lr@{--}l} % Column 2 right justifies, then --, then left justifies.
+                             % This causes the 'from' city to be right justified,
+                             % and tight against the dash, then the 'to' city is
+                             % left justified tight against the dash.
+flight no. & \multicolumn{2}{c}{route}\\
+LH\,402 & Frankfurt & Newark\\
+KL\,3171 & Amsterdam & Cork\\
+US\,1152 & San Diego & Philadelphia
+\end{tabular}
+\caption{\label{tab:T1}Some table.}
+\end{table}
+
+% HEY, you can change the name of the Bibliography title with:
+%\renewcommand{\bibname}{HOLY References}
+%\renewcommand{\bibname}{BIBLIOGRAPHY}
+\thesisbibname{Preserved PERISHABLE Research}
+%\bibliographystyle{plain}
+\begin{thebibliography}{JHM}
+
+\bibitem[1]{key-2}John Merritt, The Greatest Paper. 2010.
+\end{thebibliography}
+
+
+% You can use the environment \begin{appendix} ... \end{appendix} or simply
+% use \appendix.  Either will work.
+%
+%\begin{appendix}
+\appendix
+\chapter{My first appendix -- this is a chapter}
+This is my first appendix content.  Really?
+\chapter{My second appendix chapter}
+An more text is here.
+\section{A section of my second appendix.  This is a section.}
+An the text of the section is this.
+\section*{And an unnumbered section of the second appendix.}
+Ok how big do I make this un-numbered section?
+This was created with section*.
+
+%\end{appendix}
+
+\pagebreak{}
+\section*{VITA}
+\addcontentsline{toc}{chapter}{VITA for John} % Note, toc entry can be
+                                              % different than title of this page!
+                                              % Probably, not desirable ;-)
+My life in a text file.
+
+
+\end{document}
+
